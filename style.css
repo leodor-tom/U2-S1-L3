@@ -33,15 +33,6 @@ header {
   border-radius: 100px;
 }
 
-@media screen and (min-width: 576px) and (max-width: 768px) {
-  header {
-    border-radius: unset;
-    min-height: 100px;
-    flex-wrap: nowrap;
-    padding-block: unset;
-    align-items: center;
-  }
-}
 .nav-option {
   background-color: #ffdf7f;
   min-width: 140px;
@@ -64,7 +55,15 @@ header {
 .shop h2 {
   font-size: 1.4rem;
 }
+
 @media screen and (min-width: 576px) and (max-width: 768px) {
+  header {
+    border-radius: unset;
+    min-height: 100px;
+    flex-wrap: nowrap;
+    padding-block: unset;
+    align-items: center;
+  }
   .nav-option {
     min-width: 100px;
     height: max-content;
@@ -89,11 +88,27 @@ header {
 }
 @media screen and (min-width: 768px) {
   header {
+    flex-direction: column;
     max-width: 30%;
     border-radius: unset;
+    gap: 10px;
+    padding-block: 40px;
+    padding-inline: 20px;
+    justify-content: start;
+  }
+  .nav-option {
+    min-height: 80px;
+    width: 200px;
+    align-items: center;
+  }
+  .nav-option img {
+    width: 50%;
+    height: 60px;
+  }
+  .nav-option h2 {
   }
   .big-main {
-    max-width: 60%;
+    min-width: 70%;
   }
 }
 /*main*/
@@ -159,6 +174,44 @@ main {
     display: none;
   }
 }
+
+@media screen and (min-width: 768px) {
+  main {
+    text-align: start;
+    margin-top: 5%;
+  }
+  main h1 {
+    margin-left: 40px;
+  }
+  .cards {
+    flex-direction: unset;
+    justify-content: space-around;
+    gap: unset;
+  }
+  .card {
+    max-height: 240px;
+  }
+  main .card:nth-of-type(5) {
+    display: none;
+  }
+
+  .card-content {
+    padding-inline: unset;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main h1 {
+    font-size: 2.5rem;
+  }
+  .card {
+    max-width: 20%;
+    max-height: unset;
+    min-height: 240px;
+  }
+  main .card:nth-of-type(5) {
+    display: unset;
+  }
+}
 /*article*/
 article {
   text-align: center;
@@ -190,5 +243,21 @@ article h2 {
   article {
     text-align: start;
     margin-left: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  article {
+    text-align: start;
+    margin-left: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .article {
+    display: flex;
+    gap: 15px;
+    padding-inline: 10px;
+  }
+  .article-content {
+    order: 1;
   }
 }
