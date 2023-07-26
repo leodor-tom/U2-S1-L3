@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #722102;
+}
+h2 {
+  font-size: 1rem;
+}
+@media screen and (min-width: 576px) {
+  body {
+    margin: unset;
+  }
+}
+@media screen and (min-width: 768px) {
+  body {
+    display: flex;
+  }
+}
+
+/* header*/
+header {
+  background-color: #fef7e2;
+  display: flex;
+  align-content: space-around;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-block: 10%;
+  padding-inline: 10%;
+  justify-content: space-around;
+  border-radius: 100px;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  header {
+    border-radius: unset;
+    min-height: 100px;
+    flex-wrap: nowrap;
+    padding-block: unset;
+    align-items: center;
+  }
+}
+.nav-option {
+  background-color: #ffdf7f;
+  min-width: 140px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 3%;
+  margin: 1%;
+  height: 50px;
+}
+.shop {
+  height: auto;
+}
+
+.nav-option img {
+  width: 20%;
+  flex-shrink: 0;
+}
+
+.shop h2 {
+  font-size: 1.4rem;
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .nav-option {
+    min-width: 100px;
+    height: max-content;
+  }
+  header .nav-option:nth-of-type(4) {
+    order: 2;
+  }
+  header .nav-option:nth-of-type(5) {
+    order: 3;
+  }
+  .shop {
+    order: 1;
+    gap: 8px;
+  }
+  .shop h2 {
+    font-size: 1.2rem;
+  }
+  header h2 {
+    margin-block: auto;
+    font-size: 0.6rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  header {
+    max-width: 30%;
+    border-radius: unset;
+  }
+  .big-main {
+    max-width: 60%;
+  }
+}
+/*main*/
+
+main {
+  text-align: center;
+  margin-top: 10%;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.card {
+  background-color: #fef7e2;
+  border-radius: 50px;
+  overflow: hidden;
+  margin-inline: 10px;
+}
+
+.card img {
+  width: 100%;
+}
+.card-content {
+  display: flex;
+  padding-inline: 55px;
+}
+.thin {
+  font-weight: 400;
+}
+.card-content h2 {
+  margin-right: auto;
+}
+.button {
+  background-color: #ffdf7f;
+  max-width: 60%;
+  margin-inline: auto;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  padding: 8px;
+  font-weight: bold;
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  main {
+    text-align: start;
+    margin-top: 0px;
+  }
+  main h1 {
+    margin-left: 10px;
+  }
+  .cards {
+    flex-direction: unset;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-evenly;
+  }
+  .card {
+    max-width: 45%;
+  }
+
+  main .card:nth-of-type(5) {
+    display: none;
+  }
+}
+/*article*/
+article {
+  text-align: center;
+  margin-top: 50px;
+}
+article h2 {
+  display: block;
+  font-size: 1.6em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+.article {
+  background-color: #fef7e2;
+  text-align: start;
+  padding: 20px;
+  padding-inline: 40px;
+  border-radius: 50px;
+}
+
+.article img {
+  width: 100%;
+  padding-top: 20px;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  article {
+    text-align: start;
+    margin-left: 10px;
+  }
+}
